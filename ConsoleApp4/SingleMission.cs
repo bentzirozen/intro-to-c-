@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Excercise_1
 {
+    //single mission class
     class SingleMission : IMission
     {
         public event EventHandler<double> OnCalculate;

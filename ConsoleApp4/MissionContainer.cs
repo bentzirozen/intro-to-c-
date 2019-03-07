@@ -6,14 +6,22 @@ using System.Threading.Tasks;
 
 namespace Excercise_1
 {
+    //delegate thats gets double and returns double
     delegate double CalcFunction(double val);
     class FunctionsContainer
     {
+        //dictionary of functions
         private Dictionary<string, CalcFunction> functions { get; set; }
+        //indexer
         public CalcFunction this[string func]
         {
             //if function dont exist create it
-            get { if (!functions.ContainsKey(func)) functions[func] = value => value;
+            get {
+                if (!functions.ContainsKey(func))
+                {
+                    //if function dont exist create it
+                    functions[func] = value => value;
+                }
                 return functions[func];
             }
             //change exist function
