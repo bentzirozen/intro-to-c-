@@ -10,8 +10,8 @@ namespace Excercise_1
     class ComposedMission:IMission
     {
         public event EventHandler<double> OnCalculate;
-        public String Name { get; }
-        public String Type { get; }
+        public String Name { get; private set; }
+        public String Type { get; private set; }
         private List<CalcFunction>composedFunctions = new List<CalcFunction>();
         //constructor
         public ComposedMission(String mission)
