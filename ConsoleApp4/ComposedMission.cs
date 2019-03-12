@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Excercise_1
 {
-    //composed mission function class
+    //composed mission function class that implements iMission interface
     class ComposedMission:IMission
     {
         public event EventHandler<double> OnCalculate;
@@ -38,7 +38,7 @@ namespace Excercise_1
             foreach (var func in composedFunctions) 
             {
                 value = func(value);
-                //for event handler
+                //raise the event
                 OnCalculate?.Invoke(this, value);
             }
             return value;

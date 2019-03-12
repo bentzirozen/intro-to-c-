@@ -38,6 +38,7 @@ namespace Excercise_1
             List<string> missions = new List<string>();
             foreach(var func in functions)
             {
+                //add the key of every function (the name)
                 missions.Add(func.Key);
             }
             return missions;
